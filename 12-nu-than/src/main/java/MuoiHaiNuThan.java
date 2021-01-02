@@ -23,7 +23,8 @@ public class MuoiHaiNuThan {
         String title = doc.getElementsByClass("chapter-title").text();
 
         try {
-            FileWriter myWriter = new FileWriter("Chuong " + id + ".txt");
+            FileWriter myWriter = new FileWriter("H:\\ebook\\12-nu-than\\" + "Chuong " + id + ".txt", Charset.forName("UTF-8"));
+            myWriter.write('\ufeff');
             myWriter.write(title + "\r\n\r\n");
             myWriter.write(content);
             myWriter.close();
